@@ -16,13 +16,13 @@ class TestUsers(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = Users("MaggyIrungu", "teragram") # create new user
+        self.new_user = Users("kennedy Bernard", "teragram") # create new user
         
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
-        self.assertEqual(self.new_user.user_name,"MaggyIrungu")
+        self.assertEqual(self.new_user.user_name,"Kennnedybenard")
         self.assertEqual(self.new_user.password,"teragram")
         
             
@@ -40,15 +40,15 @@ class TestCredentials(unittest.TestCase):
         '''
         set up method to run before each test cases.
         '''
-        self.new_credential = Credentials("MaggyIrungu", "Instagram", "MaggyIrungu", "teragram") # create credentials object
+        self.new_credential = Credentials("KennedyBenard", "Instagram", "KennedyBenard", "teragram") # create credentials object
         
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
-        self.assertEqual(self.new_credential.user_name,"MaggyIrungu")
+        self.assertEqual(self.new_credential.user_name,"KennedyBenard")
         self.assertEqual(self.new_credential.account,"Instagram")
-        self.assertEqual(self.new_credential.account_username,"MaggyIrungu")
+        self.assertEqual(self.new_credential.account_username,"KennedyBenard")
         self.assertEqual(self.new_credential.account_password,"teragram")
 
 if __name__== '__main__':
