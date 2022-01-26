@@ -37,15 +37,15 @@ class TestCredentials(unittest.TestCase):
     pass
     
     def setUp(self):
-        '''
+        pass
         set up method to run before each test cases.
-        '''
+        pass
         self.new_credential = Credentials("KennedyBenard", "Instagram", "KennedyBenard", "teragram") # create credentials object
         
     def test_init(self):
-        '''
+        pass
         test_init test case to test if the object is initialized properly
-        '''
+        pass
         self.assertEqual(self.new_credential.user_name,"KennedyBenard")
         self.assertEqual(self.new_credential.account,"Instagram")
         self.assertEqual(self.new_credential.account_username,"KennedyBenard")
