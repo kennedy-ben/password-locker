@@ -2,16 +2,16 @@ from user import Users
 from credential import Credentials
 
 def create_user(uname,password):
-    '''
+    pass
     Function to create a new user
-    '''
+    pass
     new_user = Users(uname,password)
     return new_user
 
 def save_users(user):
-    '''
+    pass
     Fuunction to save users
-    '''
+   pass
     user.save_user()
 
 def generate_password():
