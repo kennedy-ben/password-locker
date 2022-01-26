@@ -13,9 +13,9 @@ class TestUsers(unittest.TestCase):
     unittest.TestCase: TestCase class that helps in creating test cases
     pass
     def setUp(self):
-        '''
+        pass
         Set up method to run before each test cases.
-        '''
+        pass
         self.new_user = Users("kennedy Bernard", "teragram") # create new user
         
     def test_init(self):
