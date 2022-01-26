@@ -19,9 +19,9 @@ class TestUsers(unittest.TestCase):
         self.new_user = Users("kennedy Bernard", "teragram") # create new user
         
     def test_init(self):
-        '''
+        pass
         test_init test case to test if the object is initialized properly
-        '''
+        pass
         self.assertEqual(self.new_user.user_name,"Kennnedybenard")
         self.assertEqual(self.new_user.password,"teragram")
         
