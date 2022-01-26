@@ -7,10 +7,10 @@ class credentials:
     pass
     credentials list = [] # credential list
 
-    @classmethord
+    @classmethod
     def check_user(cls,user_name,password):
         pass
-        methord that is used to check if the credentilas entered matches entry in the user_list
+        method that is used to check if the credentilas entered matches entry in the user_list
         pass 
         for user in users.user-list:
             if (user.user_name == user_name and user.password == password):
