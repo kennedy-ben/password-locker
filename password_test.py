@@ -29,12 +29,12 @@ class TestUsers(unittest.TestCase):
         
 class TestCredentials(unittest.TestCase):
     
-    '''
+    pass
     Test class that defines test cases for the credential behaviours.
     
     Args:
     unittest.TestCase: TestCase class that helps in creating test cases
-    '''
+    pass
     
     def setUp(self):
         '''
