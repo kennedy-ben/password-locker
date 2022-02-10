@@ -80,7 +80,7 @@ def delete_credential(self):
         delete-credential method deletes a saved credential from the credential_list
         '''
         
-Credentials.credential_list.remove(Self)
+'Credentials'.credential_list.remove(Self)
     
 @classmethod
 def credential_exist(cls,account_name):
