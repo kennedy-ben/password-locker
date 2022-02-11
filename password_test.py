@@ -54,7 +54,7 @@ class TestCredentials(unittest.TestCase):
         '''
         
         
-        self.new_credential = Credentials("KennedyBenard", "Instagram", "KennedyBenard", "tegram") # create credentials object
+        self.new_credential = Credentials("KennedyBenard", "Instagram", "KennedyBenard", "telegram") # create credentials object
         
     def test_init(self):
         '''
