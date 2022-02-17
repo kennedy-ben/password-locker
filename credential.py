@@ -1,103 +1,99 @@
-from collections import UserString
-# from msilib.schema import SelfReg
-import string
-import random
-# from typing_extensions import Self
+import unittest
 
 class Credentials:
-    '''
-    class that generates new user and their credentials
-    '''
+    """
+    Class that generates new instances of credentials
+    """
 
-    @classmethod
-    def check_user(cls,user_name,password):
-        '''
-        method that is used to check if the credentilas entered matches entry in the user_list
-        '''
+    credentials_list = []  # Empty credentials list
+    # Init method up here
+
+    
+    def __init__(self, credentials_name,credentials_user_name,fname, lname,email, credentials_site, credentials_password):
+
+
+        """
+        __init__ method to  specify the attributes of a User object
+        Args:
+            user_name = user name
+            email= email address
+            fname = fname
+            lname = lname
+            credentials_site = the name of the credentials acccount
+            credentials_password = the password of the account
+        """
+        self.credentials_name = credentials_name
+        self.credentials_user_name = credentials_user_name
+        self.fname = fname
+        self.lname = lname
+        self.email = email
+        self.credentials_site = credentials_site
+        self.credentials_password = credentials_password
         
-        
-        for user in UserString.user-list:
-            if (user.user_name == user_name and user.password == password):
-                current_user = user.user_name
-                return current_user
-    def __init__(self, user_name, account, account_username, account_password):
-        '''
-        _init__methord  that helps to define our propeties from our credential
-        '''
-        
-        
-        self.user_name = user_name
-        self.account = account
-        self.account_username = account_username
-        self.account_password = account_password
 
 
     def save_credentials(self):
+       '''
+        save_credentials method save credentials objects into credentials_list
         '''
-        save alredy printed credential
-        '''            
-        Credentials.credential_list.append(self)
 
-
-    def generate_password(size=10, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+       Credentials.credentials_list.append(self)
+    
+    def delete_credentials(self):
         '''
-        generates password of 10 characters
-        '''           
-        gen_pass=''.join(random.choice(char) for _ in range(size))
-        return gen_pass
+        delete_credentials method deletes a saved credentials from the credentials_list
+        '''
 
+        Credentials.credentials_list.remove(self)
 
     @classmethod
-    def display_credential(cls):
-        '''
-        method that returns the credential list
-        '''
-        return cls.credential_list
-            
-            
+    def display_credentials(cls, credentials_name):
+        """
+        method that will return the credentials list
+        """
+        for credentials in Credentials.credentials_list:
+            if credentials.credentials_name == credentials_name:
+                Credentials.credentials_list.append(credentials)
+                return Credentials.credentials_list
+
     @classmethod
-    def find_by_username(cls,name):
+    def find_by_email(cls, email):
         '''
-        method that takes in a username and returns the user credentials that matches the username.
-        
+        Method that takes in a email and returns the credentials that matches that email.
         Args:
-            name: user name to search for credential
-        Return :
-            Credential of person that matches the username.    
-        '''
-        for credential in cls.credential_list:
-            if credential.user_name == name:
-                return credential
-
-                
-    def delete_credential(self):
-        
-        '''
-        delete-credential method deletes a saved credential from the credential_list
-        '''
-            
-        'Credentials'.credential_list.remove(self)
-        
-    @classmethod
-    def credential_exist(cls,account_name):
-        '''
-        Method that checks if the credentials exist from the credential_list.
-        
-        Args:
-        account-name: account_name to search if credentials exist
+            email: email to search for
         Returns :
-            Boolean: True or false depending if the credentials exist
-        '''    
-        for account in cls.credential_list:
-            if account.account_username == account_name:
+            Credentials of person that matches the email.
+        '''
+
+        for credentials in cls.credentials_list:
+            if credentials.email == email:
+                return credentials
+    
+    @classmethod
+    def find_credentials(cls, credentials_name):
+        """
+        method that takes in credentials name and returns the credentials that matches that name.
+        Returns :
+            credentials name that matches the input given.
+        """
+
+        for credentials in cls.credentials_list:
+            if credentials_name == credentials_name:
+                return credentials
+
+    @classmethod
+    def credentials_exist(cls, credentials_name):
+        '''
+        Method that checks if a credentials exists from the credentials list.
+        Returns :
+            Boolean: True or false depending if the credentials exists
+        '''
+        for credentials in Credentials.credentials_list:
+            if credentials.credentials_name == credentials_name:
                 return True
             
-        return False
 
-
-
+if __name__ == '__main__':
+    unittest.main()
     
-    
-Credentials
- 
-list = [] # credential list
